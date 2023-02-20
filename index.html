@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Multi-step form | desing by @kisacasumderler</title>
+</head>
+
+<body>
+  <main class="webBody">
+    <form action="#" class="formContainer" method="post" id="PlanForm">
+      <div class="colLeft">
+        <div class="steps">
+          <h3>1</h3>
+          <h5>Step 1</h5>
+          <p>Your info</p>
+        </div>
+        <div class="steps">
+          <h3>2</h3>
+          <h5>Step 2</h5>
+          <p>Select plan</p>
+        </div>
+        <div class="steps">
+          <h3>3</h3>
+          <h5>Step 3</h5>
+          <p>Add-ons</p>
+        </div>
+        <div class="steps">
+          <h3>4</h3>
+          <h5>Step 4</h5>
+          <p>Summary</p>
+        </div>
+      </div>
+      <div class="colRight">
+        <!-- step 1 -->
+        <div class="Step Step_s">
+          <div class="stepHeader">
+            <h1>Personal info</h1>
+            <p>Please provide your name, email address, and phone number.</p>
+          </div>
+          <ul id="step1">
+            <li class="formgroup">
+              <div>
+                <label for="Name">Name</label> <span>Uyarı</span>
+              </div>
+              <input type="text" id="Name" placeholder=" e.g. Stephen King" name="userName">
+            </li>
+            <li class="formgroup">
+              <div><label for="Email">Email Address</label> <span>Uyarı</span></div>
+              <input type="email" id="Email" placeholder="e.g. stephenking@lorem.com" name="userEmail">
+            </li>
+            <li class="formgroup">
+              <div><label for="TelNo">Phone Number</label> <span>Uyarı</span></div>
+              <input type="tel" id="TelNo" placeholder="e.g. +1 234 567 890" name="userTelNo">
+            </li>
+          </ul>
+          <div class="btnContainer">
+            <div></div>
+            <div class="btn">Next Step</div>
+          </div>
+        </div>
+        <!-- step 2  -->
+        <div class="Step Step_s">
+          <div class="stepHeader">
+            <h1>Select your plan</h1>
+            <p>You have the option of monthly or yearly billing.</p>
+          </div>
+          <ul id="step2">
+            <li>
+              <label for="arcade"><img src="./assets/images/icon-arcade.svg" alt="">
+                <h4>Arcade</h4><span>$9/mo</span>
+              </label>
+              <input type="radio" id="arcade" name="plan" value="Arcade_Mo" checked>
+            </li>
+            <li>
+              <label for="advanced"> <img src="./assets/images/icon-advanced.svg" alt="">
+                <h4>Advanced</h4> <span>$12/mo</span>
+              </label>
+              <input type="radio" id="advanced" name="plan" value="Advanced_Mo">
+            </li>
+            <li>
+              <label for="pro"> <img src="./assets/images/icon-pro.svg" alt="">
+                <h4>Pro</h4> <span>$15/mo</span>
+              </label>
+              <input type="radio" id="pro" name="plan" value="Pro_Mo">
+            </li>
+            <li>
+              <span id="Monthly">Monthly</span> <span class="CircleContainer"><span class="circle"></span></span> <span
+                id="Yearly">Yearly</span>
+            </li>
+          </ul>
+          <div class="btnContainer">
+            <div class="btnprev">Go Back</div>
+            <div class="btn">Next Step</div>
+          </div>
+        </div>
+        <!-- Step 3  -->
+        <div class="Step Step_s">
+          <div class="stepHeader">
+            <h1>Pick add-ons</h1>
+            <p>Add-ons help enhance your gaming experience.</p>
+          </div>
+          <ul id="step3">
+            <li>
+              <input type="checkbox" name="OnlineService" id="OnlineService" value="1" checked>
+              <label for="OnlineService">
+                <div>
+                  <h3>Online service</h3>
+                  <p>Access to multiplayer games</p>
+                </div> <span>+$1/mo</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" name="LargerStorage" id="LargerStorage" value="2">
+              <label for="LargerStorage">
+                <div>
+                  <h3>Larger storage</h3>
+                  <p>Extra 1TB of cloud save</p>
+                </div> <span>+$2/mo</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" name="CustomizableProfile" id="CustomizableProfile" value="2">
+              <label for="CustomizableProfile">
+                <div>
+                  <h3>Customizable Profile</h3>
+                  <p>Custom theme on your profile</p>
+                </div> <span>+$2/mo</span>
+              </label>
+            </li>
+          </ul>
+          <div class="btnContainer">
+            <div class="btnprev">Go Back</div>
+            <div class="btn">Next Step</div>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="Step Step_s">
+          <div class="stepHeader">
+            <h1>Finishing up</h1>
+            <p>Double-check everything looks OK before confirming.</p>
+          </div>
+          <ul id="step4">
+            <li>
+              <div id="FinishHead">
+                <span>
+                  <h3 id="Plan_C">Arcade (Monthly)</h3>
+                  <span class="btnChange">Change</span>
+                </span>
+                <span id="Plan_P">$9/mo</span>
+              </div>
+            </li>
+            <li>
+              <span id="Total_R">Total (per month/year)</span>
+              <span>$<b id="Total_P"></b>/<b id="PTime"></b> </span>
+            </li>
+          </ul>
+          <div class="btnContainer">
+            <div class="btnprev">Go Back</div>
+            <div class="btn" id="Confirm">Confirm</div>
+          </div>
+        </div>
+        <!-- step 5 -->
+        <div class="finishStep Step_s">
+          <img src="./assets/images/icon-thank-you.svg" alt="">
+          <h1>Thank you!</h1>
+          <p>
+            Thanks for confirming your subscription! We hope you have fun
+            using our platform. If you ever need support, please feel free
+            to email us at support@loremgaming.com.
+          </p>
+        </div>
+      </div>
+    </form>
+  </main>
+  <footer class="attribution">
+    <span>Challenge by</span> <a href="https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ/hub" target="_blank">Frontend Mentor</a>
+    <span>Coded by</span> <a href="https://github.com/kisacasumderler">Sümeyya Utku | @kisacasumderler</a>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="Script.js"></script>
+</body>
+
+</html>
